@@ -8,6 +8,8 @@ defmodule MnesiaHelper do
 
   To use this module, you MUST first use the init!() function, even if you already created a schema.
 
+  You might want to change the function that automatically sets the time to a format you prefer, by default it's DateTime.utc_now().
+
   After that, you're free to use the rest of the module.
   """
   ###############################################################
@@ -385,6 +387,14 @@ defmodule MnesiaHelper do
     end
   end
 
+  @spec get_time :: DateTime.t()
+  @doc """
+  This function is used to automatically set timestamps inside some of the functions, you can change it if you wish.
+  """
+  def get_time() do
+    DateTime.utc_now()
+  end
+
   ###############################################################
   #Private fns
   ###############################################################
@@ -409,10 +419,6 @@ defmodule MnesiaHelper do
         Map.put(map, Enum.at(keys, index), Enum.at(item, index))
       end)
     end)
-  end
-
-  defp get_time() do
-    DateTime.utc_now()
   end
 
   defp to_map(input) do
