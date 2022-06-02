@@ -7,7 +7,7 @@ This module simplifies :mnesia, and works well with Ecto schemas.
 ```elixir
 def deps do
   [
-    {:mnesia_helper, "~> 1.0.0"}
+    {:mnesia_helper, "~> 1.1.3"}
   ]
 end
 ```

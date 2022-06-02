@@ -4,7 +4,7 @@ defmodule MnesiaHelper.MixProject do
   def project do
     [
       app: :mnesia_helper,
-      version: "1.0.0",
+      version: "1.1.3",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       description: description(),
@@ -37,8 +37,7 @@ defmodule MnesiaHelper.MixProject do
     [
       name: "mnesia_helper",
       # These are the default files included in the package
-      files: ~w(lib .formatter.exs mix.exs README.md* readme* LICENSE*
-                license*),
+      files: ~w(lib .formatter.exs mix.exs README.md LICENSE),
       licenses: ["GPL-3.0-or-later"],
       links: %{"GitHub" => "https://github.com/DDoubleDee/mnesia_helper/"}
     ]
