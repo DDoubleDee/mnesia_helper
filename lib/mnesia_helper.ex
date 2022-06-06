@@ -135,8 +135,8 @@ defmodule MnesiaHelper do
       :updated_at, acc ->
         Tuple.append(acc, GenServer.call(:mhtimer, 0))
       key, acc ->
-        case Map.get(input, key, nil) do
-          nil ->
+        case Map.get(input, key, :no_key) do
+          :no_key ->
             throw {:error, "Missing key", {input, key}}
           value ->
             Tuple.append(acc, value)
@@ -197,8 +197,8 @@ defmodule MnesiaHelper do
       :updated_at, acc ->
         Tuple.append(acc, GenServer.call(:mhtimer, 0))
       key, acc ->
-        case Map.get(input, key, nil) do
-          nil ->
+        case Map.get(input, key, :no_key) do
+          :no_key ->
             throw {:error, "Missing key", {input, key}}
           value ->
             Tuple.append(acc, value)

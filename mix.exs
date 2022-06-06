@@ -4,7 +4,7 @@ defmodule MnesiaHelper.MixProject do
   def project do
     [
       app: :mnesia_helper,
-      version: "1.1.3",
+      version: "1.1.4",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       description: description(),
